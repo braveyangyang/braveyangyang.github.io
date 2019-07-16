@@ -165,26 +165,9 @@
 <h3 id="一、推荐系统实验方法"><a href="#一、推荐系统实验方法" class="headerlink" title="一、推荐系统实验方法"></a>一、推荐系统实验方法</h3><h4 id="1-离线实验"><a href="#1-离线实验" class="headerlink" title="1.离线实验"></a>1.离线实验</h4><p>离线实验一般由以下几个步骤组成：</p>
 <p>(1)通过日志获得用户行为数据，并按照一定格式生成一个标准的数据集</p>
 <p>(2)将数据集按照一定的规则分成训练集和测试集</p>
-<p>(3)在训练集上训练用户兴趣模型，在测试集上预测</p>
-<p>(4)通过事先定义的离线指标测评算法测评在测试集上的预测结果</p>
-<p>优点：离线实验不需要一个实际的推荐系统来供它实验，只需要有一个从实际日志系统中提取出的数据集即可，而且不需要用户的参与，可以直接根据用户行为数据，计算出兴趣模型。</p>
-<p>缺点：很多商业上关注的指标：点击率、转化率无法获得。</p>
-<p>####2.用户调查</p>
-<p>离线实验可能导致实验的指标和商业指标存在差距，通过直接对用户进行调查，回答问题获得直接的答案。</p>
-<p>优点：可以直接获得很多用户主观感受的指标，相对在线实验风险很低，出了错误容易弥补。</p>
-<p>缺点：招募测试用户的代价大，难以组织大规模的测试用户，使统计数据意义不足。而且，用户在测试环境下的表现可能和真实环境下不同。</p>
-<h4 id="3-在线实验"><a href="#3-在线实验" class="headerlink" title="3.在线实验"></a>3.在线实验</h4><p>AB测试是一种常见的在线测评算法的方法。通过一定规则将用户随机分成几组，对不同的组采用不同的算法，通过统计不同组用户的不同测评指标来比较不同的算法。</p>
-<p>优点：可以公平的获得不同算法实际在线的性能指标</p>
-<p>缺点：周期长，只有进行长期实验才能得到可靠结果，所以只会用它测试在离线实验和用户调查中表现很好的算法。</p>
-<hr>
-<p>所以，一个新的推荐算法上线，需要几个步骤:</p>
-<p>首先，通过离线实验证明它在很多离线指标上优于现有的算法</p>
-<p>然后，通过用户调查缺点它的用户满意度不低于现有算法</p>
-<p>最后，通过在线的AB测试确定它在我们关心的指标上优于现有算法</p>
-<hr>
-<h3 id="二、测评指标"><a href="#二、测评指标" class="headerlink" title="二、测评指标"></a>二、测评指标</h3><h4 id="1-用户满意度"><a href="#1-用户满意度" class="headerlink" title="1.用户满意度"></a>1.用户满意度</h4><h4 id="2-预测准确度"><a href="#2-预测准确度" class="headerlink" title="2.预测准确度"></a>2.预测准确度</h4><p>这个指标是最重要的推荐系统离线测评指标，因为这个指标可以通过离线实验计算，便于研究人员研究推荐算法。</p>
-<p>评分预测的预测准确度主要通过均方根误差<strong>(RMSE)</strong>和平均绝对误差<strong>(MAE)</strong>计算，对于测试集中的一个用户u和物品i，令</p>
-<h4 id="3-覆盖率"><a href="#3-覆盖率" class="headerlink" title="3.覆盖率"></a>3.覆盖率</h4><h4 id="4-多样性"><a href="#4-多样性" class="headerlink" title="4.多样性"></a>4.多样性</h4><h4 id="5-新颖性"><a href="#5-新颖性" class="headerlink" title="5.新颖性"></a>5.新颖性</h4><h4 id="6-惊喜度"><a href="#6-惊喜度" class="headerlink" title="6.惊喜度"></a>6.惊喜度</h4><h4 id="7-信任度"><a href="#7-信任度" class="headerlink" title="7.信任度"></a>7.信任度</h4><h4 id="8-实时性"><a href="#8-实时性" class="headerlink" title="8.实时性"></a>8.实时性</h4><h4 id="9-健壮性"><a href="#9-健壮性" class="headerlink" title="9.健壮性"></a>9.健壮性</h4><h4 id="10-商业目标"><a href="#10-商业目标" class="headerlink" title="10.商业目标"></a>10.商业目标</h4>
+        
+          <a class="article-more-a" href="/2019/07/16/推荐系统实践1.1/#more">more >></a>
+        
       
 
       
@@ -359,68 +342,6 @@
 
 
   
-    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/08/hello/">Hello!</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/08/hello/" class="archive-article-date">
-  	<time datetime="2019-04-08T00:26:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="Welcome-to-yanayang’s-first-blog-This-is-start"><a href="#Welcome-to-yanayang’s-first-blog-This-is-start" class="headerlink" title="Welcome to yanayang’s first blog!This is start!"></a>Welcome to yanayang’s first blog!This is start!</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/08/hello/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -463,6 +384,68 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/04/08/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/08/hello/">Hello!</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/08/hello/" class="archive-article-date">
+  	<time datetime="2019-04-08T00:26:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="Welcome-to-yanayang’s-first-blog-This-is-start"><a href="#Welcome-to-yanayang’s-first-blog-This-is-start" class="headerlink" title="Welcome to yanayang’s first blog!This is start!"></a>Welcome to yanayang’s first blog!This is start!</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/08/hello/">展开全文 >></a>
         </p>
       
 
