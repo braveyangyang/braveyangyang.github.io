@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/me.jpg" class="js-avatar">
+			<img src="/img/me.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">羊羊</a></h1>
@@ -103,7 +103,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/me.jpg" class="js-avatar">
+				<img src="/img/me.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">羊羊</h1>
@@ -167,10 +167,24 @@
     <article id="post-推荐系统实践1.1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/16/推荐系统实践1.1/">推荐系统实践</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/16/推荐系统实践1.1/" class="archive-article-date">
+  	<time datetime="2019-07-16T02:01:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-推荐系统实践"><a href="#title-推荐系统实践" class="headerlink" title="title:推荐系统实践"></a>title:推荐系统实践</h2><h2 id="推荐系统实践1-1"><a href="#推荐系统实践1-1" class="headerlink" title="推荐系统实践1.1"></a>推荐系统实践1.1</h2><p>一个完整的推荐系统一般存在三个参与方：用户、物品提供者和提供推荐系统的网站，在评测一个推荐算法时，需要同时考虑三方的利益，一个好的推荐系统是能够令三方共赢的系统。</p>
+        <h2 id="推荐系统实践1-1"><a href="#推荐系统实践1-1" class="headerlink" title="推荐系统实践1.1"></a>推荐系统实践1.1</h2><p>一个完整的推荐系统一般存在三个参与方：用户、物品提供者和提供推荐系统的网站，在评测一个推荐算法时，需要同时考虑三方的利益，一个好的推荐系统是能够令三方共赢的系统。</p>
 <h3 id="一、推荐系统实验方法"><a href="#一、推荐系统实验方法" class="headerlink" title="一、推荐系统实验方法"></a>一、推荐系统实验方法</h3><h4 id="1-离线实验"><a href="#1-离线实验" class="headerlink" title="1.离线实验"></a>1.离线实验</h4><p>离线实验一般由以下几个步骤组成：</p>
 <p>(1)通过日志获得用户行为数据，并按照一定格式生成一个标准的数据集</p>
 <p>(2)将数据集按照一定的规则分成训练集和测试集</p>
@@ -184,6 +198,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">推荐系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -224,7 +249,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="title：字节跳动面试"><a href="#title：字节跳动面试" class="headerlink" title="title：字节跳动面试"></a>title：字节跳动面试</h2><p>今天是字节跳动面试第一轮，已经感觉凉了，但是也觉得自己欠缺的真的很多，比如算法，代码能力和知识储存的广度和精度上真的太需要提高了，现在把面试问题做一个汇总：</p>
+<p>title：字节跳动面试<br>tags：</p>
+<ul>
+<li>面试</li>
+<li>字节跳动</li>
+</ul>
+<hr>
+<p>今天是字节跳动面试第一轮，已经感觉凉了，但是也觉得自己欠缺的真的很多，比如算法，代码能力和知识储存的广度和精度上真的太需要提高了，现在把面试问题做一个汇总：</p>
 <p>java：</p>
 <p>解释对于对象的理解</p>
 <p>面向对象三大特性及其含义</p>
@@ -306,6 +337,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">中科院电子所</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -556,6 +602,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">中科院电子所</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
