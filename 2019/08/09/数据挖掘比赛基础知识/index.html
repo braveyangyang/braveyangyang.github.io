@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="braveYY!">
 <meta property="og:description" content="1.两个重要阶段stap1：数据清洗，数据格式调整，这一过程最为耗时 stap2：特征构建，模型选择，效果评估">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-09T06:08:16.000Z">
+<meta property="og:updated_time" content="2019-08-09T06:27:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据挖掘比赛基础知识">
 <meta name="twitter:description" content="1.两个重要阶段stap1：数据清洗，数据格式调整，这一过程最为耗时 stap2：特征构建，模型选择，效果评估">
@@ -213,9 +213,17 @@
 <li><p>问题定义：根据要解决的问题，观察y标签确定DM问题的类型。</p>
 </li>
 <li><p>数据集划分：将数据集划分为，训练集，验证集，测试集。先用训练集验证集的交叉验证来寻找模型的最优超参数，模型调优结束后，用测试集开评估模型的最终效果。此处用法：</p>
-<p>、、、</p>
-<p>from sklearn.cross_validation import StratifiedKfold</p>
-<p>、、、</p>
+<p><code>from sklearn.cross_validation import StratifiedKfold</code></p>
+</li>
+<li><p>特征工程</p>
+<p><strong>处理类别变量</strong>：</p>
+<p>原因：</p>
+<p>过程：处理类别变量一般是先标签化，然后再二值化编码。标签化的目的是将字段的原始值转换成连续的整数值，如果原始值是整数，可以直接二值化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn_pandas <span class="keyword">as</span> skp</span><br><span class="line">mapper=skp.DataFrameMapper([[(<span class="string">'Continent'</span>,sklearn.preprocessing.LabelBinarizer()),]])</span><br><span class="line">tempX=df[[<span class="string">'Continent'</span>]].head()</span><br><span class="line"><span class="keyword">print</span> mapper.fit_transform(tempX.copy())</span><br></pre></td></tr></table></figure>
+<p>这里用到的是一个小众的库<code>sklearn_pandas</code>,可以将原来一列的Continent字段直接变成one-hot编码。如果原始值是整数，可以直接用<code>sklearn-preprocessing.OneHotEncoder()</code>即可，把上面的LabelBinarizer()换掉。注意要把对训练集上的变换原封不动的作用到测试集，而不能重新对测试集的数据做变换。</p>
+<p><strong>处理数值变量</strong>：</p>
+<p>原因：</p>
+<p>过程：只需做正规化和标准化，分别对应<code>scikit-learn</code>中的Normalizer和StandardScaler，对于长尾字段，可以用log和sigmoid等方法使数据分布相对均匀。偏斜的正态分布，可以用BoxCox变换。</p>
 </li>
 </ol>
 </li>
@@ -457,10 +465,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
@@ -470,6 +474,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据挖掘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
