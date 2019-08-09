@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="braveYY!">
 <meta property="og:description" content="1.两个重要阶段stap1：数据清洗，数据格式调整，这一过程最为耗时 stap2：特征构建，模型选择，效果评估">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-09T03:50:56.000Z">
+<meta property="og:updated_time" content="2019-08-09T06:08:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据挖掘比赛基础知识">
 <meta name="twitter:description" content="1.两个重要阶段stap1：数据清洗，数据格式调整，这一过程最为耗时 stap2：特征构建，模型选择，效果评估">
@@ -201,8 +201,25 @@
 <p><strong>多标签问题</strong>：y有多维，一个样本可以有多个标签，也就是可以属于多个类。</p>
 <p><strong>单回归问题</strong>：y是一维，取值连续，比如气温或股价等。</p>
 <p><strong>多回归问题</strong>：y有多维，连续取值，比如气温和空气湿度和降雨量。</p>
-<h3 id="3-评价指标"><a href="#3-评价指标" class="headerlink" title="3.评价指标"></a>3.评价指标</h3><p>对于二分类问题，很多时候可能存在正样本数量远大于负样本，所以通常采用AUC值—即ROC曲线下的面积来评价二分类的结果。</p>
-<p><strong>AUC</strong>:</p>
+<h3 id="3-评价指标"><a href="#3-评价指标" class="headerlink" title="3.评价指标"></a>3.评价指标</h3><p>对于二分类问题，很多时候可能存在正样本数量远大于负样本，所以通常采用<a href="https://blog.csdn.net/u013385925/article/details/80385873" target="_blank" rel="noopener">AUC</a>值—即ROC曲线下的面积来评价二分类的结果。</p>
+<p>对于多分类或多标签问题，我们通常采用交叉熵(cross-entropy)或者log损失(log loss),对于回归问题，则可以采用MSE(mean square error)。</p>
+<h3 id="4-DM问题基本框架"><a href="#4-DM问题基本框架" class="headerlink" title="4.DM问题基本框架"></a>4.DM问题基本框架</h3><p>重点分为两部分：</p>
+<ul>
+<li><p>特征工程(各种离散化、组合、选择)</p>
+</li>
+<li><p>模型选择、模型融合(ensemble)</p>
+<p>具体有以下几个步骤：</p>
+<ol>
+<li><p>问题定义：根据要解决的问题，观察y标签确定DM问题的类型。</p>
+</li>
+<li><p>数据集划分：将数据集划分为，训练集，验证集，测试集。先用训练集验证集的交叉验证来寻找模型的最优超参数，模型调优结束后，用测试集开评估模型的最终效果。此处用法：</p>
+<p>、、、</p>
+<p>from sklearn.cross_validation import StratifiedKfold</p>
+<p>、、、</p>
+</li>
+</ol>
+</li>
+</ul>
 
       
 
@@ -336,7 +353,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-两个重要阶段"><span class="toc-number">1.</span> <span class="toc-text">1.两个重要阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-问题分类"><span class="toc-number">2.</span> <span class="toc-text">2.问题分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-评价指标"><span class="toc-number">3.</span> <span class="toc-text">3.评价指标</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-两个重要阶段"><span class="toc-number">1.</span> <span class="toc-text">1.两个重要阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-问题分类"><span class="toc-number">2.</span> <span class="toc-text">2.问题分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-评价指标"><span class="toc-number">3.</span> <span class="toc-text">3.评价指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-DM问题基本框架"><span class="toc-number">4.</span> <span class="toc-text">4.DM问题基本框架</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -440,6 +457,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
@@ -452,15 +473,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">字节跳动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
             
             <div class="clearfix"></div>
