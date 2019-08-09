@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Scikit-learn入门1 经典分类回归算法 | braveYY!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.LinearRegression线性回归####1.1线性回归python代码： LinearRegression 123456789101112from sklearn import linear_modelfrom sklearn import metrics   #metrics是一个内置的评估模块，里面有很多评估方法from sklearn.model_selection import">
+  <meta name="description" content="1.LinearRegression线性回归1.1线性回归python代码：LinearRegression">
 <meta name="keywords" content="数据挖掘,scikit-learn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scikit-learn入门1 经典分类回归算法">
 <meta property="og:url" content="http://yoursite.com/2019/08/09/cikit-learn入门/index.html">
 <meta property="og:site_name" content="braveYY!">
-<meta property="og:description" content="1.LinearRegression线性回归####1.1线性回归python代码： LinearRegression 123456789101112from sklearn import linear_modelfrom sklearn import metrics   #metrics是一个内置的评估模块，里面有很多评估方法from sklearn.model_selection import">
+<meta property="og:description" content="1.LinearRegression线性回归1.1线性回归python代码：LinearRegression">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-09T07:47:11.000Z">
+<meta property="og:updated_time" content="2019-08-09T07:51:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scikit-learn入门1 经典分类回归算法">
-<meta name="twitter:description" content="1.LinearRegression线性回归####1.1线性回归python代码： LinearRegression 123456789101112from sklearn import linear_modelfrom sklearn import metrics   #metrics是一个内置的评估模块，里面有很多评估方法from sklearn.model_selection import">
+<meta name="twitter:description" content="1.LinearRegression线性回归1.1线性回归python代码：LinearRegression">
   
     <link rel="alternative" href="/atom.xml" title="braveYY!" type="application/atom+xml">
   
@@ -193,8 +193,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-LinearRegression线性回归"><a href="#1-LinearRegression线性回归" class="headerlink" title="1.LinearRegression线性回归"></a>1.LinearRegression线性回归</h2><p>####1.1线性回归python代码：</p>
-<p><strong>LinearRegression</strong></p>
+        <h2 id="1-LinearRegression线性回归"><a href="#1-LinearRegression线性回归" class="headerlink" title="1.LinearRegression线性回归"></a>1.LinearRegression线性回归</h2><h3 id="1-1线性回归python代码："><a href="#1-1线性回归python代码：" class="headerlink" title="1.1线性回归python代码："></a>1.1线性回归python代码：</h3><p><strong>LinearRegression</strong></p>
+<a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics   <span class="comment">#metrics是一个内置的评估模块，里面有很多评估方法</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data=pd.read_csv(<span class="string">''</span>)</span><br><span class="line">x=data.drop(<span class="string">'label'</span>,axis=<span class="number">1</span>)</span><br><span class="line">y=data[<span class="string">'label'</span>]</span><br><span class="line">x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=<span class="number">0.1</span>,random_state=<span class="number">0</span>)</span><br><span class="line">reg=linear_model.LinearRegression()</span><br><span class="line">reg.fit(x_train,y.train)</span><br><span class="line">y_pred=reg.predict(x_test)</span><br><span class="line">metrics.mean_squared_error(y_test,y_pred)</span><br></pre></td></tr></table></figure>
 <p>以上是线性回归,可选的参数有：</p>
 <ol>
@@ -344,7 +344,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-LinearRegression线性回归"><span class="toc-number">1.</span> <span class="toc-text">1.LinearRegression线性回归</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-LinearRegression线性回归"><span class="toc-number">1.</span> <span class="toc-text">1.LinearRegression线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1线性回归python代码："><span class="toc-number">1.1.</span> <span class="toc-text">1.1线性回归python代码：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -456,15 +456,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中科院电子所</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
